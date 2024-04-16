@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+        // all jQuery code should be written in this code.....
+        // this ensures the Document is loaded in the browser before accessing
+        $(document).ready(function(){   
+            //in jQuery the first is Selector($("#text")) and other is method(.html())
+            var a = $("#text").html();
+            console.log(a);
+        })
+    </script>
+</head>
+<body>
+    <span id="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam repellat quis eum totam libero quae nisi maiores est similique ipsa.</span>
+</body>
+</html>

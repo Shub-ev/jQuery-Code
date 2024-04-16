@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#text1").css("color", "red"); // id selector
+
+            $(".text2").css("color", "green"); //class selector
+
+            $("p").css("font-size", "30px"); // tag selector (affects all same tags in the whole document)
+
+            $("p, ul li").css("font-family", "cursive"); // select multiple tags using single selector
+
+            $("*").css("background-color", "yellow"); //universal selector selects all the elements in teh document
+
+            $("body").css("background-color", "white"); //selects the main visible elements in the document
+
+            $("ul li").css("background-color", "green"); //trageting all similar childs of a parent
+
+            $(".li1, .li2").css("color", "white"); //targeting multiple classes in single query
+
+            $("p:first").css(); //target the first element of any type in whole document
+            $("p:last").css(); //target the last element of any type in whole document
+            $("p:even").css(); //target the event elements of any type in whole document
+            $("p:odd").css(); //target the odd elements of any type in whole document
+        })
+    </script>
+</head>
+<body>
+    <p id="text1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, exercitationem?</p>
+    <p class="text2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, exercitationem?</p>
+    <p id="text1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, exercitationem?</p>
+
+    <ul>
+        <li class="li1">Shubham</li>
+        <li class="li2">Mahesh</li>
+        <li>Gharage</li>
+    </ul>
+</body>
+</html>

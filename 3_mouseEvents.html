@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#text1").click(function(){   //click a mouse event and its emplementation
+                $(this).css("color","red");
+            })
+
+            $(".text2").dblclick(function(){ //double click mouse event and its implementation
+                $(this).css("color",'green'); 
+            })
+
+            $(".li1").contextmenu(function(){ //right click mouse event and its implementation
+                $(this).css("color",'blue');
+            })
+
+            $(".li2").mouseenter(function() { //event when mouse enters over the element / enter in the border of the element
+                $(this).css("color","pink");
+            })
+
+            $(".li1").mouseleave(function() { //event when mouse leaves the element
+                $(this).css("color","red");
+            })
+
+            $("#list").mouseover(function() { //event when mouse is over the element
+                $(this).css("background-color","green");
+            })
+        })
+    </script>
+</head>
+<body>
+    <p id="text1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, exercitationem?</p>
+    <p class="text2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, exercitationem?</p>
+    <p id="text1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, exercitationem?</p>
+
+    <ul id="list">
+        <li class="li1">Shubham</li>
+        <li class="li2">Mahesh</li>
+        <li>Gharage</li>
+    </ul>
+</body>
+</html>

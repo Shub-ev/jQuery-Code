@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+
+    <script>
+
+        //these events are regarding the form events
+
+        $(document).ready(function(){
+            $("#name").focus(function(){                    //when we focus on a input field the event triggers.
+                $(this).css("background-color", "pink");
+            })
+            
+            $("#name").blur(function() {                    //when we click else where or when we go out of focus this event triggers
+                $(this).css("background-color", "white");
+            })
+
+            $("#sCountry").change(function() {              //when the value of the select tag changes to the perticular value
+                $(this).css("background-color", "red");
+            })
+
+            $("#name").select(function() {                  //when we select the text in the input tag the background color changes
+                $(this).css("background-color", "green");
+            })
+
+            $("#form").submit(function() {                  //when we submit the form this event is triggerd
+                alert("Form submitted");
+            })
+        })
+    </script>
+</head>
+<body>
+    <span id="result" style="position: absolute; top: 50%; left: 45%;"></span>
+    <form action="" id="form" style="display: flex; flex-direction: column; width: 300px;gap: 10px;">
+        <span id="title">Form</span>
+        <input type="text" name="" id="name" placeholder="Enter Name">
+        <input type="email" name="" id="email" placeholder="Enter Email">
+        <input type="password" name="" id="pass" placeholder="Enter Password">
+        <Select id="sCountry">
+            <option value="India">India</option>
+            <option value="Pakistan" id="pak">Pakistan</option>
+            <option value="Nepal">Nepal</option>
+            <option value="China">China</option>
+        </Select>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

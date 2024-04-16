@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("body").keydown(function() {  // keyboard event when the key is clicked(pressed one time and left)
+            $(this).css("background-color", "blue");
+        })
+
+        $("body").keypress(function() {  // keyboard event when the key is kept pressed and didnt left
+            $(this).css("background-color", "pink");
+        })
+
+        $("body").keyup(function() { // when the key is left
+            $(this).css("background-color", "white");
+        })
+      });
+    </script>
+  </head>
+  <body>
+    <p id="text1">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident,
+      exercitationem?
+    </p>
+    <p class="text2">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident,
+      exercitationem?
+    </p>
+    <p id="text1">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident,
+      exercitationem?
+    </p>
+
+    <ul id="list">
+      <li class="li1">Shubham</li>
+      <li class="li2">Mahesh</li>
+      <li>Gharage</li>
+    </ul>
+  </body>
+</html>
