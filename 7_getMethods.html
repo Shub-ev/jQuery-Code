@@ -6,17 +6,42 @@
     <title>Document</title>
     <script src="jquery.js"></script>
 
-    <script></script>
+    <script>
+        $(document).ready(function(){
+            var a = $('#div1').html(); // get all the html of css selector '#div1' and save it to a
+            console.log(a);
+
+            var a = $('#div1 h3').text(); // get all the text of css selector '#div1 h3' and save it to a
+            console.log(a);
+
+            var b = $('#div1 h3').attr("id"); //get the values of attributes of the css selector '#div1 h3' and save it to b
+            console.log(b);
+
+            $("#form").submit(function(event) {  //submit method for form fubmit event on id selector
+                event.preventDefault(); 
+                var a = $("#text").val();  //get the value of the input tag on form submit and assigns it to a
+                console.log(a);
+
+                $("#text").val("");   // set the value of input tag to "" using val
+            })
+        })
+    </script>
   </head>
   <body>
     <span>jQuery get methods</span>
     <div id="div1">
-        <h3 id="divTitle">Title</h3>
+        <h3 id="divTitle" class="text">Title of div</h3>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut esse, in
       aperiam hic voluptates voluptatum explicabo quidem minus obcaecati
       sapiente iste commodi fugiat soluta minima, recusandae mollitia totam! Id
       vero maxime, repellat, magnam cumque deleniti ipsa nemo enim sint in,
       corporis deserunt numquam. Eius, quos sint fuga modi porro et.
     </div>
+    <br>
+    <br>
+    <form action="" id="form">
+        <input type="text" id="text">
+        <button type="submit">Submit</button>
+    </form>
   </body>
 </html>

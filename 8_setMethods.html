@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#btn").click(function() { //this is the button click event method on the button id
+                $("#title").text("New Title");  //this is the setting new text in the html tag using css id selector
+            })
+
+            $("#btn2").click(function() {    
+                $("#title").html("Another New <strong>Title</strong>")  //using this method we can change the html of any tag
+            })
+
+            $("#btn3").click(function(){
+                $("#title").attr("class","red");  //this sets the attributes of the html tag
+            })
+
+            $("#inp").val("Input value");   //sets the default value to the input tags
+        })
+    </script>
+  </head>
+  <body>
+    <div>
+      <p id="title">Title</p>
+      <span
+        >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit
+        perferendis laudantium corrupti libero. Impedit sit reiciendis vitae
+        eius cupiditate modi quaerat eligendi perspiciatis quam odio voluptates
+        assumenda recusandae asperiores magnam officia officiis ipsa, dolor
+        itaque tempora architecto ducimus alias? Dicta ea repudiandae quo
+        tempore. Corrupti non, amet libero incidunt accusantium deserunt minus
+        porro aperiam hic excepturi perferendis sunt inventore. Cum dignissimos
+        consequatur nulla libero? Numquam ad delectus cupiditate facere ipsum
+        dolores atque reiciendis veritatis nostrum debitis, eveniet recusandae
+        suscipit tenetur eum dicta consequuntur deserunt. Ad blanditiis
+        laudantium aliquam ipsum fugit sit obcaecati porro, molestias eum
+        incidunt veritatis, libero iste expedita?</span
+      >
+    </div>
+    <br><br>
+    <input type="text" id="inp">
+    <br><br>
+    <button id="btn">Change Text Title</button>
+    <button id="btn2">Change Html of Title</button>
+    <button id="btn3">Change Attributes of Title</button>
+  </body>
+</html>
